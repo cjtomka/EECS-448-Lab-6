@@ -1,0 +1,10 @@
+Bugs:
+
+The enqueue() function possesses improper behavior. 
+Rather than adding new elements to the back of the list, it adds them to the front. 
+In this way, the queue actually behaves more like a stack.
+
+For example, in test 11, after enqueueing 8 elements we end up with: 
+HEAD = 7 -> 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> 0 = TAIL
+And after dequeueing 4 elements we get:
+HEAD = 3 -> 2 -> 1 -> 0 = TAIL
